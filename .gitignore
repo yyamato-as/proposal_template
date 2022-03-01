@@ -1,4 +1,4 @@
-*.fdb_latemk
+*.fdb_latexmk
 *.bbl
 *.blg
 *.dvi
