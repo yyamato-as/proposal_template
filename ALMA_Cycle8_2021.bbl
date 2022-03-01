@@ -1,0 +1,11 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+
+\bibitem[{{Yamato}(2022)}]{Yamato22}
+\textbullet~{Yamato}, Y. 2022, \apj, 790, 97
+
+\bibitem[{{Yamato}(2023)}]{Yamato23}
+\textbullet~{Yamato}, Y. 2023, \apj, 790, 97
+
+\end{thebibliography}

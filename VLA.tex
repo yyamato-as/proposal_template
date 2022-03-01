@@ -1,0 +1,197 @@
+%% Suggested LaTeX template for the scientific justification
+%% to be submitted as part of an NRAO observing proposal
+%%
+%% Version for GBT/VLA/VLBA/HSA dated 2013 July 23
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% DOCUMENT FORMAT %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The default font was chosen to be easily readable while allowing
+%% sufficient material to be included.
+
+%% The two-column, 11pt format fits the largest number of characters 
+%% per page while still being within allowed limits.
+
+%% There are two documentclass commands provided below. Please 
+%% uncomment the version you would like to use and comment out the 
+%% other.
+
+%% Please note that the proposal will be printed on US Letter size 
+%% paper, 8.5 in x 11 in, and that formatting the text for other sizes
+%% will generally cause layout problems and may result in text being
+%% cut off near the edges. PLEASE DO NOT CHANGE THE ``LETTERPAPER'' 
+%% OPTION IN THE DOCUMENTCLASS COMMAND.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Default format: 11pt single column %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[letterpaper,11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Default font, two-column %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,11pt,twocolumn]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% HOW TO INCLUDE FIGURES %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Please see the ``Included packages'' section below.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Included packages %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{amsmath,amssymb}
+\usepackage{natbib}
+\usepackage{aas_macros}
+\usepackage{compactbib}
+% \usepackage{xspace}
+\usepackage{txfonts}
+
+% \newcommand{\ammonia}{NH$_3$\xspace}
+% \newcommand{\dammonia}{NH$_2$D\xspace}
+% \newcommand{\fammonia}{$^{15}$NH$_3$\xspace}
+% \newcommand{\water}{H$_2$O\xspace}
+% \newcommand{\ewater}{H$_2^{18}$O\xspace}
+% \newcommand{\methanol}{CH$_3$OH\xspace}
+
+
+%% Feel free to modify the included packages list to use your 
+%% favorite packages.
+
+%% In the graphics and graphicx packages, Postscript and eps figures
+%% can be included using the \includegraphics command. The graphics
+%% package is part of standard LaTeX2e and provides a basic way of
+%% including a figure. The graphicx package is not standard, but 
+%% extends the \includegraphics command to make it more user-friendly.
+%% If graphicx is not available on your system please remove it from
+%% the list of included packages above.
+
+%% Syntax:
+%% In the graphics package:
+%%
+%% \begin{figure}
+%% \includegraphics[llx,lly][urx,ury]{file}
+%% \end{figure}
+%%
+%% where ll denotes 'lower left' and ur 'upper right' and the x and y
+%% values are the coordinates of the PostScript bounding box in
+%% points. There are 72 points in an inch.
+%%
+%% In the graphicx package:
+%% 
+%% \begin{figure}
+%% \includegraphics[key=val,key=val,...]{file}
+%% \end{figure}
+%%
+%% where some of the useful keys are: angle, width, height,
+%% keepaspectratio (='true' or 'false') and scale. Bounding box values
+%% can be given as [bb=llx lly urx ury].
+%%
+%% In either case you have to use LaTeX figure placement commands to
+%% position the figure on the page; \includegraphics will not do
+%% that. Both these commands also have other options that are listed
+%% in the LaTeX manual (for the graphics package) and in ``The LaTeX
+%% Graphics Companion'' (for the graphicx package).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Page dimensions %%%%%
+%%%%%  DO NOT CHANGE  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\textwidth}{6.5in} \setlength{\textheight}{9in}
+\setlength{\topmargin}{-0.0625in} \setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in} \setlength{\headheight}{0in}
+\setlength{\headsep}{0in} \setlength{\hoffset}{0in}
+\setlength{\voffset}{0in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Section heading format %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\renewcommand{\section}{\@startsection%
+{section}{1}{0mm}{-\baselineskip}%
+{0.5\baselineskip}{\normalfont\Large\bfseries}}%
+\makeatother
+\newcommand{\red}[1]{{\color{red}\bf #1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Start of document %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Title of proposal %%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center} 
+\bfseries\uppercase{%
+%%
+%% ENTER TITLE OF PROPOSAL BELOW THIS LINE
+%Constraining the abundance of ammonia and methanol in a hot corino
+Title of the proposal
+%%
+%%
+}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Body of scientific justification %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% ENTER TEXT AND FIGURES BELOW
+%%
+
+\section{Science Justification}
+Nogizaka 46 is the most popular idol group in Japan \citep{Yamato22}.
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=\hsize]{MAPS_disks.png}
+    \caption{\em{Hogehoge}}
+    \label{fig:MAPS_disks}
+\end{figure*}
+
+
+\begin{table}[h]
+    \centering
+    \caption{\em{Summary of our previous observations}}
+    \label{tab:transitions}
+    \begin{tabular}{cccc}\hline
+         & $N$(NH$_3$) & $N$(NH$_2$D) & $T_\mathrm{ex}$  \\
+                   & [cm$^{-2}$] & [cm$^{-2}$]  & [K]  \\
+        \hline
+    IRAS 4A1 & $8.0^{+4.0}_{-2.4}\times 10^{17}$ & $7.3^{+5.3}_{-1.9}\times 10^{17}$ & $99^{+7}_{-7}$ \\
+    IRAS 4A2 & $1.0^{+0.34}_{-0.23}\times 10^{18}$ & $4.9^{+1.9}_{-1.4}\times 10^{17}$ & $156^{+25}_{-23}$ \\
+    \hline
+    \end{tabular}
+\end{table}
+
+
+\section{Description of Observations}
+Shiori Kubo is a very attractive member of Nogizaka 46 \citep{Yamato22}.
+
+
+
+% \vspace{1em}
+
+\section*{References}
+
+\bibliographystyle{aas_compactbib}
+\bibliography{reference}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% End of document %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
