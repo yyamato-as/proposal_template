@@ -62,8 +62,11 @@
 
 \documentclass[12pt,a4paper]{article}  %% DO NOT CHANGE to 11pt or less !
 
-\usepackage[dvipdfmx]{graphicx}
-\usepackage[dvipdfmx]{color}
+\usepackage[dvipdfmx]{graphics, graphicx}
+% if you on overleaf...
+\usepackage{color}
+% if you on local...
+% \usepackage[dvipdfmx]{color}
 \usepackage{amsmath,amssymb}
 \usepackage{natbib}
 \usepackage{aas_macros}
@@ -103,8 +106,14 @@
 %% Proposals not compliant to this will be rejected. See Section 5.3.1 in the ALMA Proposer's Guide.
 
 \section{Scientific Justification}
-Nogizaka 46 is the most popular idol group in Japan \citep{Yamato22}
+Nogizaka 46 is the most popular idol group in Japan \citep{Yamato22}.
 
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.8\hsize]{MAPS_disks.png}
+    \caption{\em{Hogehoge}}
+    \label{fig:MAPS_disks}
+\end{figure*}
 
 \section{Description of Observations}
 Shiori Kubo is a very attractive member of Nogizaka 46 \citep{Yamato23}.
