@@ -62,7 +62,17 @@
 
 \documentclass[12pt,a4paper]{article}  %% DO NOT CHANGE to 11pt or less !
 
-\usepackage{graphics,graphicx}
+\usepackage[dvipdfmx]{graphics, graphicx}
+% if you on overleaf...
+\usepackage{color}
+% if you on local...
+% \usepackage[dvipdfmx]{color}
+\usepackage{amsmath,amssymb}
+\usepackage{natbib}
+\usepackage{aas_macros}
+\usepackage{compactbib}
+\usepackage{txfonts}
+\usepackage{threeparttable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% Page dimensions %%%%%
@@ -156,15 +166,20 @@ Frequency (GHz) & Sensitivity (mJy) \\
 % appropriateness of, ALMA Cycle 9 data.  
 
 
-\section{References}
+
+\section*{References}
+\bibliographystyle{aas_compactbib}
+\bibliography{reference}
+
+% \section{References}
 
 % List references here
 % Minimum font size for references: 12pt 
 % Proposals not compliant to this will be rejected. See Section 5.3.1 in the ALMA Proposer's Guide.
 
-\noindent [1] Author1 et al. year, journal, vol, page
+% \noindent [1] Author1 et al. year, journal, vol, page
 
-\noindent [2] Author2 et al. year, journal, vol, page
+% \noindent [2] Author2 et al. year, journal, vol, page
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
